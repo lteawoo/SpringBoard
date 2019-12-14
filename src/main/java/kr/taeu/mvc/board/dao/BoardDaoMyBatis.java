@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class BoardDaoMyBatis implements BoardDAO {
+public class BoardDaoMyBatis implements BoardDao {
     private SqlSessionTemplate sqlSessionTemplate;
 
     @Autowired

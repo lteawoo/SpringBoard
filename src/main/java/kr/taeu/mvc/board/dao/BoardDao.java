@@ -4,7 +4,7 @@ import kr.taeu.mvc.board.domain.BoardVO;
 
 import java.util.List;
 
-public interface BoardDAO {
+public interface BoardDao {
     public abstract List<BoardVO> list();
 
     public abstract int delete(BoardVO boardVO);
