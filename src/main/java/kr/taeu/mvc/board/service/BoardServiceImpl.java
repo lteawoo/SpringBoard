@@ -2,10 +2,12 @@ package kr.taeu.mvc.board.service;
 
 import kr.taeu.mvc.board.dao.BoardDao;
 import kr.taeu.mvc.board.domain.BoardVO;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
+@Service
 public class BoardServiceImpl implements BoardService {
     @Resource
     private BoardDao boardDao;

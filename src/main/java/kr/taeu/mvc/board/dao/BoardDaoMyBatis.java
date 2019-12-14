@@ -12,7 +12,7 @@ public class BoardDaoMyBatis implements BoardDao {
     private SqlSessionTemplate sqlSessionTemplate;
 
     @Autowired
-    public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
+    public void setSqlMapClient(SqlSessionTemplate sqlSessionTemplate) {
         this.sqlSessionTemplate = sqlSessionTemplate;
     }
 
@@ -27,7 +27,7 @@ public class BoardDaoMyBatis implements BoardDao {
     }
 
     @Override
-    public int deleteALL() {
+    public int deleteAll() {
         return sqlSessionTemplate.delete("deleteAll");
     }
 
