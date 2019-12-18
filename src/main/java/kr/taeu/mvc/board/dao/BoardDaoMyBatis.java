@@ -9,9 +9,10 @@ import java.util.List;
 
 @Repository
 public class BoardDaoMyBatis implements BoardDao {
+    @Autowired
     private SqlSessionTemplate sqlSessionTemplate;
 
-    @Autowired
+
     public void setSqlMapClient(SqlSessionTemplate sqlSessionTemplate) {
         this.sqlSessionTemplate = sqlSessionTemplate;
     }
