@@ -59,6 +59,26 @@ public class TestBoardDao{
         compareVO(boardDao.select(vo.getSeq()), vo);
     }
 
+    @Test
+    public void insert() {
+        BoardVO vo = new BoardVO();
+        BoardVO dbVO;
+        int size = boardDao.list().size();
+
+        vo.setTitle("글쓰기테스트");
+        vo.setContent("내용테스트");
+        vo.setWriter("글쓴이");
+        vo.setPassword(123);
+
+        boardDao.insert(vo);
+
+        dbVO = boardDao.select(vo.getSeq());
+        vo.setRegDate(dbVO.getRegDate());
+
+        assertThat(boardDao.list().size(), is(size + 1));
+        compareVO(boardDao.select(vo.getSeq()), vo);
+    }
+
     private void compareVO(BoardVO vo1, BoardVO vo2) {
         assertThat(vo1.getSeq(), is(vo2.getSeq()));
         assertThat(vo1.getTitle(), is(vo2.getTitle()));
