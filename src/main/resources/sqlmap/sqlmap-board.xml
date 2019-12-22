@@ -35,18 +35,17 @@
     </insert>
 
     <update id="update" parameterType="boardVO">
-        UPDATE BOARD SET
-             ( title = #{title}
+        UPDATE BOARD
+           SET title = #{title}
              , content = #{content}
              , writer = #{writer}
-             )
          WHERE seq = #{seq}
            AND password = #{password}
     </update>
 
     <update id="updateCount" parameterType="int">
-        UPDATE BOARD SET
-             ( cnt = cnt + 1)
+        UPDATE BOARD
+           SET cnt = cnt + 1
          WHERE seq = #{seq}
     </update>
 

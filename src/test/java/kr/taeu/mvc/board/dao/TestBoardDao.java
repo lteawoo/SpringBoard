@@ -46,6 +46,19 @@ public class TestBoardDao{
         }
     }
 
+    @Test
+    public void update() {
+        BoardVO vo = boardList.get(0);
+
+        vo.setTitle("title");
+        vo.setContent("content");
+        vo.setWriter("writer");
+
+        boardDao.update(vo);
+
+        compareVO(boardDao.select(vo.getSeq()), vo);
+    }
+
     private void compareVO(BoardVO vo1, BoardVO vo2) {
         assertThat(vo1.getSeq(), is(vo2.getSeq()));
         assertThat(vo1.getTitle(), is(vo2.getTitle()));
