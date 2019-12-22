@@ -9,7 +9,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.validation.Valid;
 
 @Controller
 public class BoardController {
@@ -35,7 +36,7 @@ public class BoardController {
     }
 
     @RequestMapping(value="/board/write", method=RequestMethod.POST)
-    public String write(BoardVO boardVO, BindingResult bindingResult) {
+    public String write(@Valid BoardVO boardVO, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
             return "/board/write";
         } else {
