@@ -7,31 +7,29 @@
     <title>Insert title here</title>
 </head>
 <body>
-    <table border="1">
-        <tr>
-            <th>제목</th>
-            <td>${boardVO.title}</td>
-        </tr>
-        <tr>
-            <th>내용</th>
-            <td>${boardVO.content}</td>
-        </tr>
-        <tr>
-            <th>작성자</th>
-            <td>${boardVO.writer}</td>
-        </tr>
-        <tr>
-            <th>작성일</th>
-            <td>${boardVO.regDate}</td>
-        </tr>
-        <tr>
-            <th>조회수</th>
-            <td>${boardVO.cnt}</td>0
-        </tr>
-    </table>
-    <div>
-        <a href="<c:url value='/board/edit/${boardVO.seq}'/>">수정</a>
-        <a href="<c:url value='/board/list'/>">목록</a>
-    </div>
+    <form action="<c:url value="/board/write" />" method="POST">
+        <table border="1">
+            <tr>
+                <th>제목</th>
+                <td><input name="title"></td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td><input name="content"></td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td><input name="writer"></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input name="password" type="password"></td>
+            </tr>
+        </table>
+        <div>
+            <input type="submit" value="등록">
+            <a href="<c:url value='/board/list'/>">목록</a>
+        </div>
+    </form>
 </body>
 </html>
