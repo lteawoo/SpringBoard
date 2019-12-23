@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b201eca-5f84-42ce-832c-fb0a6e3cd58d" name="Default Changelist" comment="">
+    <list default="true" id="4b201eca-5f84-42ce-832c-fb0a6e3cd58d" name="Default Changelist" comment="write의 session에 추가된 boardVO를 행동완료 후에 제거">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/taeu/mvc/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/taeu/mvc/board/controller/BoardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577070457925</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="write의 session에 추가된 boardVO를 행동완료 후에 제거">
+      <created>1577071251057</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577071251057</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,7 +253,8 @@
     <MESSAGE value="Service test 구현. mockito 라이브러리 사용&#10;기존 클래스를 대신 주입하는데 가짜로 만든다&#10;가짜로 만들어진 객체를 검증하거나 행동에 대해 결과를 지정할 수 있다.." />
     <MESSAGE value="delete 테스트" />
     <MESSAGE value="delete 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete 구현" />
+    <MESSAGE value="write의 session에 추가된 boardVO를 행동완료 후에 제거" />
+    <option name="LAST_COMMIT_MESSAGE" value="write의 session에 추가된 boardVO를 행동완료 후에 제거" />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1577068207605">
@@ -262,10 +269,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="751" y="400" width="455" height="240" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1577066521019" />
-    <state x="443" y="114" key="CommitChangelistDialog2" timestamp="1577070455662">
+    <state x="443" y="114" width="1250" height="812" key="CommitChangelistDialog2" timestamp="1577071302437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="443" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577070455662" />
+    <state x="443" y="114" width="1250" height="812" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577071302437" />
     <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1577070371152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -282,10 +289,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577070371150" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1577070459972">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1577071290229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577070459972" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577071290229" />
     <state x="652" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1577059675790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
