@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -77,6 +78,25 @@ public class TestBoardDao{
 
         assertThat(boardDao.list().size(), is(size + 1));
         compareVO(boardDao.select(vo.getSeq()), vo);
+    }
+
+    @Test
+    public void delete() {
+        int size = boardList.size();
+
+        boardDao.delete(boardList.get(0));
+
+        boardList = boardDao.list();
+
+        assertThat(boardList.size(), is(size - 1));
+        assertThat(boardDao.select(0), is(nullValue()));
+    }
+
+    @Test
+    public void deleteAll() {
+        boardDao.deleteAll();
+
+        assertThat(boardDao.list().size(), is(0));
     }
 
     private void compareVO(BoardVO vo1, BoardVO vo2) {
