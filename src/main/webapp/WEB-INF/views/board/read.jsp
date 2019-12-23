@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <th>조회수</th>
-            <td>${boardVO.cnt}</td>0
+            <td>${boardVO.cnt}</td>
         </tr>
     </table>
     <div>

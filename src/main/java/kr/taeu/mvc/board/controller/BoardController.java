@@ -44,4 +44,24 @@ public class BoardController {
             return "redirect:/board/list";
         }
     }
+
+    @RequestMapping(value="/board/edit/{seq}", method=RequestMethod.GET)
+    public String edit(@PathVariable int seq, Model model) {
+        BoardVO boardVO = boardService.read(seq);
+        model.addAttribute("boardVO", boardVO);
+        return "/board/edit";
+    }
+
+    @RequestMapping(value="/board/edit/{seq}", method=RequestMethod.POST)
+    public String edit(@Valid BoardVO boardVO, BindingResult result, int pwd, Model model) {
+        if(!result.hasErrors()) {
+            if(boardVO.getPassword() == pwd) {
+                boardService.edit(boardVO);
+                return "redirect:/board/list";
+            }
+
+            model.addAttribute("msg", "비밀번호가 일치하지 않습니다.");
+        }
+        return "/board/edit";
+    }
 }
