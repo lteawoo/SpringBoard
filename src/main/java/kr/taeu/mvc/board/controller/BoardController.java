@@ -36,11 +36,12 @@ public class BoardController {
     }
 
     @RequestMapping(value="/board/write", method=RequestMethod.POST)
-    public String write(@Valid BoardVO boardVO, BindingResult bindingResult) {
+    public String write(@Valid BoardVO boardVO, BindingResult bindingResult, SessionStatus sessionStatus) {
         if(bindingResult.hasErrors()) {
             return "/board/write";
         } else {
             boardService.write(boardVO);
+            sessionStatus.setComplete();
             return "redirect:/board/list";
         }
     }
